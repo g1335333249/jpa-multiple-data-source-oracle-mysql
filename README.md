@@ -1,7 +1,7 @@
 # jpa-multiple-data-source-oracle-mysql
-JPA多数据源之Oracle——MySQL
-基本配置与双[mysql](https://github.com/g1335333249/jpa-multiple-data-source-mysql-mysql)情况相同
-仅需在第二个mysql数据源中添加Mysql的方言
+    JPA多数据源之Oracle——MySQL
+        基本配置与双[mysql](https://github.com/g1335333249/jpa-multiple-data-source-mysql-mysql)情况相同
+        仅需在第二个mysql数据源中添加Mysql的方言
 ```java
     @Bean("entityManagerFactorySecondary")
     public LocalContainerEntityManagerFactoryBean entityManagerFactorySecondary(EntityManagerFactoryBuilder builder) {
