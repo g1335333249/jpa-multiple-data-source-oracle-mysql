@@ -2,6 +2,7 @@
 JPA多数据源之Oracle——MySQL
 基本配置与双mysql情况相同
 仅需在第二个mysql数据源中添加Mysql的方言
+```java
     @Bean("entityManagerFactorySecondary")
     public LocalContainerEntityManagerFactoryBean entityManagerFactorySecondary(EntityManagerFactoryBuilder builder) {
         Map<String, String> param = new HashMap<>();
@@ -10,3 +11,4 @@ JPA多数据源之Oracle——MySQL
         return builder.dataSource(dataSourceSecondary).packages("com.hffss.oracle.entity.secondary").persistenceUnit("secondaryPersistenceUnit").
                 properties(jpaProperties.getHibernateProperties(new HibernateSettings())).build();
     }
+```
