@@ -8,7 +8,6 @@ JPA多数据源之Oracle——MySQL
         Map<String, String> param = new HashMap<>();
         param.put("hibernate.dialect", "org.hibernate.dialect.MySQL5Dialect");
         jpaProperties.setProperties(param);
-        return builder.dataSource(dataSourceSecondary).packages("com.hffss.oracle.entity.secondary").persistenceUnit("secondaryPersistenceUnit").
-                properties(jpaProperties.getHibernateProperties(new HibernateSettings())).build();
+        return builder.dataSource(dataSourceSecondary).packages("com.hffss.oracle.entity.secondary").persistenceUnit("secondaryPersistenceUnit").properties(jpaProperties.getHibernateProperties(new HibernateSettings())).build();
     }
 ```
